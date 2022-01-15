@@ -1,0 +1,96 @@
+/* loginDiv is main div in the login page */
+.loginDiv{
+    display: flex;
+    margin: 86px;
+    height: 75%;
+}
+
+/* These css styles are applied for the left side image in the login page */
+.notepadCls{
+    border-top-right-radius: 235px;
+    border-bottom-right-radius: 235px;
+    background-color: #FFFFFF;
+    width: 70%;
+    margin-left: 70px;
+    z-index: 1;
+}
+.todoImage{
+    width: 60%; 
+    height: 90%;
+    /* margin-top: 60px; */
+}
+
+/* These css styles are applied for the right side part of the login page */
+.todoOuterCls{
+    position: absolute;
+    height: 73%;
+    left: 46%;
+    background-color: #7563eb;
+    border-radius: 10px;
+    width: 40%;
+}
+
+.todoDivCls{
+    background-color: #ff619e;
+    border-radius: 10px;
+    margin-top: 50px;
+    margin-left: 40px;
+    width: 80%;
+    height: 80%;
+    z-index: 2;
+    position: relative;
+}
+.todoInnerDivCls{
+    padding: 10% 0 0 0%;
+}
+/*Include the color and font family to the title*/
+.loginTitle {
+    font-size: 1.8vw;
+    width: 30vw;
+    color: #FFFFFF;
+    padding-left: 5%;
+    font-family: Montserrat sans-serif;
+    text-align: center;
+}
+/*Include height and padding to the image*/
+.loginTodoCls {
+    height: 60px;
+    padding: 16% 0 0 30%;
+}
+
+/* Responsive for Desktop*/
+@media screen and (max-width: 700px) {
+    .loginDiv {
+      width: 85%;
+      margin: 86px 10px 86px 35px;
+    }
+
+    .notepadCls {
+      width: 45%;
+    }
+
+    .loginTodoCls {
+        padding: 12% 0 0 12%;
+        height: 35px;
+    }
+}
+@media screen and (max-width: 650px) {
+    .todoDivCls {
+        margin-left: 20px;
+    }
+}
+
+/* Responsive for Phone*/
+@media screen and (max-width: 400px) {
+    .loginTodoCls {
+        height: 35px;
+    }
+
+    .todoDivCls {
+        margin-left: 20px;
+    }
+
+    .loginDiv {
+        margin: 86px 10px 86px 35px;
+    }
+}

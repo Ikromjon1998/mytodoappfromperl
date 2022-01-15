@@ -1,0 +1,256 @@
+/*Include the background color to the body*/
+body {
+    margin: 0;
+    font-family: Montserrat;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-image: linear-gradient(90deg,#9c94f9,#7563eb);
+}
+
+/* Include the padding and border in an element's total width and height */
+* {
+    box-sizing: border-box;
+}
+
+/* Style the header */
+.header {
+    margin: 0 60px 0 60px;
+    height: 14vh;
+    display: -webkit-flex;
+    -webkit-align-items: flex-end;
+    align-items: flex-end;
+    border-bottom: 1px solid;
+    border-color: hsla(0,0%,100%,.5);
+    color: #fff;
+    padding-top: 25px;
+}
+
+/*Include width and height to the main logo*/
+.mainLogo {
+    height: 9.7vh;
+    width: 175px;
+}
+
+/* styles related to the top right corner button*/
+.headNavButtonsContainer {
+    -webkit-justify-content: flex-end;
+    justify-content: flex-end;
+    margin-bottom: .6%;
+    width: 87vw;
+}
+.headNavButtonsContainer, .linkTag {
+    display: flex;
+    -webkit-align-items: center;
+    align-items: center;
+}
+.addTask {
+    height: 3vh;
+    cursor: pointer;
+    background-color: #ff619e;
+    border-radius: 4px;
+    padding: 18px 0;
+}
+.addTask, .addTaskBtnIconsContainer {
+    -webkit-align-items: center;
+    align-items: center;
+    display: flex;
+}
+.linkTag {
+    width: 110px;
+    height: 3vh;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.headNavIcons {
+    width: 15px;
+}
+.btntext {
+    padding-left: .4vw;
+}
+
+/*Include the padding and text alignment for the text*/
+.noDataFound {
+    padding: 16% 0 0 30%;
+    color: #fff;
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    width: 50%;
+}
+
+ /*Styles related to the input text area */
+ .addTaskContainer {
+    color: #fff;
+    display: none;
+    margin: 20px 60px 0 60px;
+}
+.itemcontainer {
+    border-radius: 6px;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-justify-content: start;
+    justify-content: start;
+    background-color: #fff;
+}
+
+/*Styles related to the input text area */
+.taskInputFieldContainer {
+    width: 75%;
+    padding: 1.2% 5% 1.6% 2.2%;
+}
+.addTaskInputField {
+    resize: none;
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-bottom: 1px solid #d3d3d3;
+    overflow-wrap: break-word;
+    background-color: initial;
+    flex-wrap: wrap;
+    -webkit-flex-wrap: wrap;
+    font-size: 14px;
+}
+
+/*Styles related to the save icon*/
+.addTaskEditBtnContainer {
+    display: -webkit-flex;
+    display: flex;
+    width: 25%;
+}
+.addTaskBtnIconsContainer {
+    width: 33.3%;
+    -webkit-justify-content: center;
+    justify-content: center;
+}
+.saveTaskIcon {
+    height: 25%;
+}
+
+/*Styles related to the delete icon*/
+.deleteIconsContainer {
+    width: 33.3%;
+    -webkit-justify-content: center;
+    justify-content: center;
+    display: none;
+}
+
+/* Remove margins and padding from the list */
+ul {
+    padding: 0;
+}
+
+/* Style the list items */
+ul li {
+    cursor: pointer;
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    list-style-type: none;
+    background: #eee;
+    font-size: 18px;
+    transition: 0.2s;
+
+    /* make the list items unselectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+/* Set all odd list items to a different color (zebra-stripes) */
+ul li:nth-child(odd) {
+    background: #f9f9f9;
+}
+
+/* Darker background-color on hover */
+ul li:hover {
+    background: #ddd;
+}
+
+/* When clicked on, add a background color and strike out text */
+ul li.checked {
+    background: #888;
+    color: #fff;
+}
+
+/* Add a "checked" mark when clicked on */
+ul li.checked::before {
+    content: '';
+    position: absolute;
+    border-color: #fff;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 15px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+
+/*Styles related to the list item */
+.card {
+    padding: 10px;
+    width: 200px;
+    height: 200px;
+    margin-right: 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    line-height: 1.6;
+
+    border: solid 2px #cf11c4;
+}
+.card:hover{
+    overflow-y: scroll !important;
+    transform: scale(1.0, 1.0);
+    box-shadow: 5px 5px 30px 15px rgba(0,0,0,0.25), -5px -5px 30px 15px rgba(0,0,0,0.22);
+}
+
+/* styles related to the list items */
+.listcolumn {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 10px 60px 60px 60px;
+}
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+    .listcolumn {
+      width: 85%;
+      display: block;
+      margin-bottom: 20px;
+    }
+}
+
+/*Include the flex direction for the edit and delete icons*/
+.iconCls {
+    display: none;
+    flex-direction: row-reverse;
+}
+
+/* Style the close button */
+.close {
+    padding: 5px 16px 5px 16px;
+}
+.close:hover {
+    background-color: #f44336;
+    color: #FFFFFF;
+}
+/* Style the edit button */
+.edit {
+    padding: 4px 12px 4px 12px;
+}
+
+.edit:hover {
+    background-color: #f44336;
+    color: #FFFFFF;
+}
+
+/*Include the text alignment for the data in the list item*/
+.cardViewInput {
+    text-align: justify;
+    font-family: sans-serif;
+    font-size: 1.0rem;
+    color: #1276e0;
+}

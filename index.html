@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body onload="restoreData()">
+  <div id="headerDIV" class="header">
+      <!-- this div is for main logo of top left corner -->
+      <div>
+        <img  src = ".\resources\SidemenuLogo.svg" class="mainLogo" alt="ToDoLogo">
+      </div>
+      <!-- Ths div tag is for add task button at top right corner -->
+      <div class="headNavButtonsContainer">
+        <div class="addTask">
+          <a class="linkTag" onClick ="showInputText()" >
+            <img src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABEAAAARCAYAAAA7bUf6AAAABHNCSVQICAgIfAhkiAAAAF1JREFUOI3tkksKgDAMBSc9g5eyxTN4f/xcYVwJLmxFXAl9q0CGIYEHjahF3dSxxcWDxHOMiFTjqos36ZIbiZqt5MJFjVFzqAswfDhkTcD87RnmXrY/SyZgB0oLOgAnqFIh8SWNdAAAAABJRU5ErkJggg==" class="white headNavIcons">
+            <p class="btntext">Add Task</p>
+          </a>
+        </div>
+      </div>       
+  </div >
+  <div class="noDataFound">Add your first todo by pressing “Add Task” button at the top right corner</div>
+  <!-- This div tag is to show textarea, save and delete icon  -->
+  <div class="addTaskContainer" id="addtaskcontainerid">
+    <div id="ItemContainer" class="itemcontainer">
+      <!-- This div tag is to show textarea -->
+      <div class="taskInputFieldContainer">
+        <textarea class="addTaskInputField" id="todoinputfield" type="text" required=""></textarea>
+      </div>
+      <div class="addTaskEditBtnContainer">
+        <!-- This div tag is to show save icon  -->
+        <div class="addTaskBtnIconsContainer" title="Save" >
+          <img src = ".\resources\ConfirmTaskSVG.svg" class="saveTaskIcon" onClick= "createTodo()">
+        </div>
+         <!-- This div tag is to show delete icon -->
+        <div id ="cancelBtnId" class="deleteIconsContainer" title="Cancel">
+          <img src = ".\resources\Delete.svg" onClick = "clearText()">
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- This div tag is to add list item -->
+  <div id="todoitemscontainer">
+    <ul id="todoitemslist" class="listcolumn"> </ul>
+  </div>
+  <script type="text/javascript" src=".\js\main.js"></script>
+  <link rel="stylesheet" type="text/css" href=".\styles\main.css">
+</body>
+</html>
